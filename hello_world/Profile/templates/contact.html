@@ -1,0 +1,259 @@
+<!-- Profile ----------->
+
+{% include 'navbar.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+<title>Contact</title>
+<section id="contact">
+	<center>
+	<font size="6">
+			
+<p>CONTACT INFO</p>
+
+	</font>
+		<div class="contact-item">
+			<div class="dropdown1">
+				<button onclick="myFunction1()" class="dropbtn">FirstDropdown</button>
+				<div id="myDropdown1" class="dropdown-content">
+				  <input type="text" placeholder="Search.." id="myInput1" onkeyup="filterFunction1()">
+				  <a href="#Egg">Egg</a>
+				  <a href="#base">Base</a>
+				</div>
+			  </div>
+			<h1>Phone Number</h1>
+			<h2>+xx-xxxxxxxxxx</h2>
+		</div>
+		</div>
+		<div class="contact-item">
+			<h1>Email</h1>
+			<h2>xyz@example.com</h2>
+		</div>
+		</div>
+		<div class="contact-item">
+			<h1>Address</h1>
+			<h2>City, State, Country</h2>
+		</div>
+		</div>
+	</div>
+	</div>
+	<style>
+		/*dropdown style ----------------------------- */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput1 {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput1:focus {outline: 3px solid #ddd;}
+
+#myInput2 {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput2:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+  position: absolute;
+  display: inline-block;
+  top:65%;
+  left:20%;
+}
+
+.dropdown2 {
+  position: absolute;
+  display: inline-block;
+  top:96%;
+  left:20%;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+
+
+
+
+		navbar {
+	width: 100%;
+	margin:0px 0;
+	}
+		navbar ul{
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	}
+
+	navbar ul li{
+	width: 33%;
+	float: left;
+	}
+		navbar ul li a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	padding: 20px 0;
+	display: block;
+	width: 100%;
+	background-color: rgb(160, 236, 145);
+	}
+
+	navbar ul li a:hover {
+	background-color: rgb(11, 221, 29);
+	}
+
+.home{
+	margin-right: 5%;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	border-radius: 10px;
+	box-shadow: 15px 15px 15px black;
+	text-align: justify;
+	color: white;
+	background-image: linear-gradient(rgb(129, 196, 235), rgb(5, 44, 151));
+}
+
+.project-area {
+
+	background-repeat: no-repeat;
+	background-position: left;
+	box-sizing: border-box;
+}
+
+.project-item {
+	width: 75%;
+	margin-top:5px;
+	margin-bottom:15px;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 40px gray;
+	text-align: justify;
+	color: white;
+	background-color: black;
+}
+
+#project {
+	border-left: 15px solid;
+	border-image: linear-gradient(purple, tomato);
+	border-image-slice: 1;
+}
+
+
+#contact .contact-item {
+background-color: aquamarine;
+float: left;
+	width: 20%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 15px 15px 15px black;
+}
+
+	</style>
+	</center>
+	
+	<!-- Dropdown Script ----------------->
+	<script>
+		function myFunction1() {
+		  document.getElementById("myDropdown1").classList.toggle("show");
+		}
+		
+		function myFunction2() {
+		  document.getElementById("myDropdown2").classList.toggle("show");
+		}
+		
+		function filterFunction1() {
+		  var input, filter, ul, li, a, i;
+		  input = document.getElementById("myInput1");
+		  filter = input.value.toUpperCase();
+		  div = document.getElementById("myDropdown1");
+		  a = div.getElementsByTagName("a");
+		  for (i = 0; i < a.length; i++) {
+			txtValue = a[i].textContent || a[i].innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			  a[i].style.display = "";
+			} else {
+			  a[i].style.display = "none";
+			}
+		  }
+		}
+		function filterFunction2() {
+		  var input, filter, ul, li, a, i;
+		  input = document.getElementById("myInput2");
+		  filter = input.value.toUpperCase();
+		  div = document.getElementById("myDropdown2");
+		  a = div.getElementsByTagName("a");
+		  for (i = 0; i < a.length; i++) {
+			txtValue = a[i].textContent || a[i].innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			  a[i].style.display = "";
+			} else {
+			  a[i].style.display = "none";
+			}
+		  }
+		}
+		</script>
+</section>
