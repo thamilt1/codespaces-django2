@@ -25,7 +25,9 @@ navbar {
 	}
 
 	navbar ul li a:hover {
-	background-color: rgb(11, 221, 29);
+	background-image: linear-
+gradient(rgb(129, 196, 235), rgb(5, 44, 151));
+
 	}
 
 .home{

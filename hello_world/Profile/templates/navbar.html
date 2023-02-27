@@ -31,11 +31,13 @@ text-align: center;
 padding: 20px 0;
 display: block;
 width: 100%;
-background-color: rgb(160, 236, 145);
+background-color: rgb(159, 125, 227);
 }
 
 navbar ul li a:hover {
-background-color: rgb(11, 221, 29);
+background-image: linear-gradient(rgb(53, 118, 174), rgb(173, 46, 220));
+
+
 }
 
 .home{
@@ -102,4 +104,17 @@ box-shadow: 15px 15px 15px black;
 }
 
 </style>
-<hr>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

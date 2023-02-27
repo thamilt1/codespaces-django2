@@ -11,7 +11,9 @@
 <p>CONTACT INFO</p>
 
 	</font>
-		<div class="contact-item">
+	<div class="normal-text">
+		<h1>Block 1</h1>
+		</div>
 			<div class="dropdown1">
 				<button onclick="myFunction1()" class="dropbtn">FirstDropdown</button>
 				<div id="myDropdown1" class="dropdown-content">
@@ -19,19 +21,13 @@
 				  <a href="#Egg">Egg</a>
 				  <a href="#base">Base</a>
 				</div>
-			  </div>
-			<h1>Phone Number</h1>
-			<h2>+xx-xxxxxxxxxx</h2>
 		</div>
 		</div>
-		<div class="contact-item">
-			<h1>Email</h1>
-			<h2>xyz@example.com</h2>
+		<div class="normal-text">
+			<h1>Block 2</h1>
 		</div>
-		</div>
-		<div class="contact-item">
-			<h1>Address</h1>
-			<h2>City, State, Country</h2>
+		<div class="normal-text">
+			<h1>Block 3</h1>
 		</div>
 		</div>
 	</div>
@@ -45,6 +41,7 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
+  
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -78,10 +75,9 @@
 #myInput2:focus {outline: 3px solid #ddd;}
 
 .dropdown1 {
-  position: absolute;
+	position:relative;
   display: inline-block;
-  top:65%;
-  left:20%;
+  margin: left;
 }
 
 .dropdown2 {
@@ -142,81 +138,60 @@
 	padding: 20px 0;
 	display: block;
 	width: 100%;
-	background-color: rgb(160, 236, 145);
+	background-color: rgb(159, 125, 227);
 	}
 
 	navbar ul li a:hover {
-	background-color: rgb(11, 221, 29);
+	background-image: linear-gradient(rgb(53, 118, 174), rgb(173, 46, 220));
+
 	}
-
-.home{
-	margin-right: 5%;
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 5px;
-	padding-bottom: 15px;
-	border-radius: 10px;
-	box-shadow: 15px 15px 15px black;
-	text-align: justify;
-	color: white;
-	background-image: linear-gradient(rgb(129, 196, 235), rgb(5, 44, 151));
-}
-
-.project-area {
-
-	background-repeat: no-repeat;
-	background-position: left;
-	box-sizing: border-box;
-}
-
-.project-item {
-	width: 75%;
-	margin-top:5px;
-	margin-bottom:15px;
-	margin-left: 5%;
-	margin-right: 5%;
-	padding-top:5px;
-	padding-bottom:5px;
-	padding-left: 30px;
-	padding-right: 30px;
-	border-radius: 10px;
-	box-shadow: 10px 10px 40px gray;
-	text-align: justify;
-	color: white;
-	background-color: black;
-}
-
-#project {
-	border-left: 15px solid;
-	border-image: linear-gradient(purple, tomato);
-	border-image-slice: 1;
-}
 
 
 #contact .contact-item {
 background-color: aquamarine;
-float: left;
-	width: 20%;
-	padding: 20px;
+	width: 10%;
+	padding-left: 10px;
 	text-align: center;
 	border-radius: 10px;
-	padding: 30px;
-	margin: 30px;
+	padding: 10px;
+	margin: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 15px 15px 15px black;
+	box-shadow: 10px 10px 10px black;
+}
+
+
+.normal-text {
+	text-align: left;
+	padding:30px;
 }
 
 	</style>
 	</center>
 	
-	<!-- Dropdown Script ----------------->
 	<script>
+		window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+	/*Dropdown Script -------------------------------*/
+
 		function myFunction1() {
 		  document.getElementById("myDropdown1").classList.toggle("show");
 		}
@@ -257,3 +232,14 @@ float: left;
 		}
 		</script>
 </section>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
+<p>w</p>
