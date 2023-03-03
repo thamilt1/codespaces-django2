@@ -75,7 +75,9 @@
 #myInput2:focus {outline: 3px solid #ddd;}
 
 .dropdown1 {
-	position:relative;
+	top:40%;
+	left:3%;
+	position:absolute;
   display: inline-block;
   margin: left;
 }
@@ -124,7 +126,6 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	}
 
 	navbar ul li{
@@ -168,26 +169,26 @@ background-color: aquamarine;
 	padding:30px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 	</style>
 	</center>
 	
 	<script>
-		window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+		const navbar = document.querySelector('#NavBar');
+let top = navbar.offsetTop;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbar.classList.add('sticky');
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove('sticky');    
   }
 }
+window.addEventListener('scroll', stickynavbar);
 
 
 	/*Dropdown Script -------------------------------*/
