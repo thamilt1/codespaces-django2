@@ -1,5 +1,8 @@
 <!-- Login --------------->
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {% include 'navbar.html' %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'styles/style.css' %}">
@@ -8,14 +11,17 @@
 		<center>
 			<font size="6">
 				
-<p><b>LOGIN</b></p>
+<p><b>FRIEND ZONE</b></p>
+	</font>
 
-				
-
-			</font>
+	<font size="5">
+<p><b>Login</b></p>
+	</font>
+			
 		</center>
 		<style>
 			body {font-family: Arial, Helvetica, sans-serif;}
+			form {border: 3px solid #f1f1f1;}
 
 			/* Modal Login Style ------------------------------*/
 			input[type=text], input[type=password] {
@@ -28,6 +34,7 @@
 }
 
 /* Set a style for all buttons */
+
 button {
   background-color: #04AA6D;
   color: white;
@@ -90,7 +97,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 60%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -229,21 +236,18 @@ span.psw {
 		flex-direction: column;
 		box-shadow: 15px 15px 15px black;
 	}
-	
+
 		</style>
+		</head>
 		<body>
 		<!-- Modal Login Body ------------------------------->
-			<h2>Modal Login Form</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:100%">Login</button>
 
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="PngItem_307416.png" alt="Avatar" class="avatar">
-    </div>
+
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
@@ -253,14 +257,12 @@ span.psw {
       <input type="password" placeholder="Enter Password" name="psw" required>
         
       <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+ 
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw"> <a href="#">Forgot password?</a></span>
     </div>
   </form>
 </div>
@@ -279,3 +281,4 @@ span.psw {
 	</script>
 		</body>
 </section>
+</html>
