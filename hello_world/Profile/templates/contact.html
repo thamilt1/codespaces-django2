@@ -15,12 +15,16 @@
 		<h1>Block 1</h1>
 		</div>
 			<div class="dropdown1">
-				<button onclick="myFunction1()" class="dropbtn">FirstDropdown</button>
-				<div id="myDropdown1" class="dropdown-content">
-				  <input type="text" placeholder="Search.." id="myInput1" onkeyup="filterFunction1()">
-				  <a href="#Egg">Egg</a>
-				  <a href="#base">Base</a>
-				</div>
+				
+				<button onclick="myFunction1()" class="dropbtn">Type</button>
+				
+					<div id="myDropdown1" class="dropdown-content">
+						{% for cat in class_cats %}
+						<input type="text" placeholder="Search.." id="myInput1" onkeyup="filterFunction1()">
+						<a href="#{{ cat }}">{{ cat }}</a>
+						{% endfor %}
+					</div>
+				
 		</div>
 		</div>
 		<div class="normal-text">
